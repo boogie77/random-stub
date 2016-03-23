@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{E951739E-EC59-46A7-81A1-163B59855243}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>Win32Project1</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120_xp</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120_xp</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <GenerateManifest>false</GenerateManifest>
+    <OutDir>..\..\..\..\..\Desktop\</OutDir>
+    <TargetName>output</TargetName>
+    <PostBuildEventUseInBuild>false</PostBuildEventUseInBuild>
+    <TargetExt>.exe</TargetExt>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>Disabled</Optimization>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <IntrinsicFunctions>false</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <FavorSizeOrSpeed>Neither</FavorSizeOrSpeed>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+      <DebugInformationFormat>None</DebugInformationFormat>
+      <AssemblerOutput>AssemblyAndSourceCode</AssemblerOutput>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <StringPooling>false</StringPooling>
+      <StructMemberAlignment>Default</StructMemberAlignment>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>false</OptimizeReferences>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <BaseAddress>0x00400000</BaseAddress>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>true</DataExecutionPrevention>
+      <FixedBaseAddress>true</FixedBaseAddress>
+      <GenerateWindowsMetadata>false</GenerateWindowsMetadata>
+      <EntryPointSymbol>WinMain</EntryPointSymbol>
+      <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;comctl32.lib;ole32.lib;libcmt.lib</AdditionalDependencies>
+      <MinimumRequiredVersion>5.01</MinimumRequiredVersion>
+    </Link>
+    <PostBuildEvent>
+      <Command>"C:\Users\Admin\Documents\Visual Studio 2013\Projects\ResourceAdder\ResourceAdder\bin\Debug\ResourceAdder.exe"
+C:\Users\Admin\Desktop\NativeStorage\Release\NativeStorage.exe</Command>
+    </PostBuildEvent>
+    <ResourceCompile>
+      <IgnoreStandardIncludePath>false</IgnoreStandardIncludePath>
+      <ResourceOutputFileName />
+      <Culture>0x007f</Culture>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="PELoader.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="Win32Project1.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="Win32Project1.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Win32Project1.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\..\..\..\..\Downloads\windows_xp_shell32_dll_ico\win_xp_shell32_dll_ico\winxp_ico_shell32_dll-002.ico" />
+    <Image Include="..\..\..\..\..\Downloads\windows_xp_shell32_dll_ico\win_xp_shell32_dll_ico\winxp_ico_shell32_dll-009.ico" />
+    <Image Include="..\..\..\..\..\Downloads\windows_xp_shell32_dll_ico\win_xp_shell32_dll_ico\winxp_ico_shell32_dll-010.ico" />
+    <Image Include="..\..\..\..\..\Downloads\windows_xp_shell32_dll_ico\win_xp_shell32_dll_ico\winxp_ico_shell32_dll-017.ico" />
+    <Image Include="..\..\..\..\..\Downloads\windows_xp_shell32_dll_ico\win_xp_shell32_dll_ico\winxp_ico_shell32_dll-022.ico" />
+    <Image Include="..\..\..\..\..\Downloads\windows_xp_shell32_dll_ico\win_xp_shell32_dll_ico\winxp_ico_shell32_dll-023.ico" />
+    <Image Include="..\..\..\..\..\Downloads\windows_xp_shell32_dll_ico\win_xp_shell32_dll_ico\winxp_ico_shell32_dll-024.ico" />
+    <Image Include="..\..\..\..\..\Downloads\windows_xp_shell32_dll_ico\win_xp_shell32_dll_ico\winxp_ico_shell32_dll-037.ico" />
+    <Image Include="..\..\..\..\..\Downloads\windows_xp_shell32_dll_ico\win_xp_shell32_dll_ico\winxp_ico_shell32_dll-038.ico" />
+    <Image Include="..\..\..\..\..\Downloads\windows_xp_shell32_dll_ico\win_xp_shell32_dll_ico\winxp_ico_shell32_dll-045.ico" />
+    <Image Include="..\..\..\..\..\Downloads\windows_xp_shell32_dll_ico\win_xp_shell32_dll_ico\winxp_ico_shell32_dll-046.ico" />
+    <Image Include="small.ico" />
+    <Image Include="Win32Project1.ico" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

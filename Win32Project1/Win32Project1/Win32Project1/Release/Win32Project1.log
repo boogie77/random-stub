@@ -1,0 +1,18 @@
+﻿Build started 11/17/2015 2:25:16 PM.
+     1>Project "C:\Users\Admin\documents\visual studio 2013\Projects\Win32Project1\Win32Project1\Win32Project1.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /nologo /W3 /WX- /Od /Ob1 /Oy- /D WIN32 /D NDEBUG /D _WINDOWS /D _USING_V110_SDK71_ /D _MBCS /GF- /Gm- /EHsc /MT /GS- /Gy- /fp:precise /Zc:wchar_t /Zc:forScope /Yc"stdafx.h" /Fp"Release\output.pch" /FAs /Fa"Release\\" /Fo"Release\\" /Fd"Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt stdafx.cpp
+         stdafx.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /nologo /W3 /WX- /Od /Ob1 /Oy- /D WIN32 /D NDEBUG /D _WINDOWS /D _USING_V110_SDK71_ /D _MBCS /GF- /Gm- /EHsc /MT /GS- /Gy- /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Release\output.pch" /FAs /Fa"Release\\" /Fo"Release\\" /Fd"Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Win32Project1.cpp
+         Win32Project1.cpp
+     1>c:\users\admin\documents\visual studio 2013\projects\win32project1\win32project1\PELoader.h(257): warning C4309: 'initializing' : truncation of constant value
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"..\..\..\..\..\Desktop\output.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib comctl32.lib ole32.lib libcmt.lib /NODEFAULTLIB /MANIFEST:NO /PDB:"..\..\..\..\..\Desktop\output.pdb" /SUBSYSTEM:WINDOWS,"5.01" /OPT:NOREF /OPT:ICF /LTCG /TLBID:1 /WINMD:NO /ENTRY:"WinMain" /BASE:"0x00400000" /DYNAMICBASE:NO /FIXED /NXCOMPAT /IMPLIB:"..\..\..\..\..\Desktop\output.lib" /MACHINE:X86 /SAFESEH Release\stdafx.obj
+         Release\Win32Project1.obj
+         LINK : /LTCG specified but no code generation required; remove /LTCG from the link command line to improve linker performance
+         Win32Project1.vcxproj -> C:\Users\Admin\documents\visual studio 2013\Projects\Win32Project1\Win32Project1\..\..\..\..\..\Desktop\output.exe
+     1>Done Building Project "C:\Users\Admin\documents\visual studio 2013\Projects\Win32Project1\Win32Project1\Win32Project1.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:00.41
